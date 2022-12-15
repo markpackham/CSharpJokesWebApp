@@ -25,6 +25,14 @@ namespace CSharpJokesWebApp.Controllers
               return View(await _context.Joke.ToListAsync());
         }
 
+        // GET: Jokes/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            // Since the View has the same name as the method this isn't needed
+            //return View("ShowSearchForm");
+            return View();
+        }
+
         // GET: Jokes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
